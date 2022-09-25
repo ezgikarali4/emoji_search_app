@@ -1,38 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: azure;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+header .search-input {
+  width: 500px;
+  height: 35px;
+  margin: 15px auto 0 auto;
+  border: 1px solid #9dcbd6;
+  border-radius: 7px;
+  text-indent: 10px;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+}
+body{
+ padding: 10px;
+}
+.emoji-result {
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.emoji-result .emoji-list {
+  list-style-type: none;
+  background-color: #e491f5;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 1px;
+  padding: 10px 0 10px 10px;
+}
+
+.emoji-list .title {
+  margin-left: 20px;
+}
+
+.emoji-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.emoji-list li .copy {
+  font-size: 14px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.search{
+  padding-top: 10px ;
 }
